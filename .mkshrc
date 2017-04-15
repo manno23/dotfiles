@@ -1,0 +1,14 @@
+# mkshrc - jm
+
+# check if this is really mksh	# {((
+case $KSH_VERSION in
+#MIRBSD\ KSH*) ;;
+*) return 0 ;;
+esac							# }
+
+# set the prompt
+PS1="\${PWD#$HOME%/*}/} $ "
+
+# aliases
+alias ls='ls --color -F'
+export PAGER="most"
